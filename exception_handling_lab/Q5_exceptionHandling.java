@@ -4,14 +4,13 @@ public class Q5_exceptionHandling {
 
 	public static void main(String[] args)throws Exception {
 		try {
-			if (args.length > 0) {
-				for (int i = 0; i < args.length; i++) {
-					System.out.println("args[" + i + "] = " + args[i]);
-				}
-			} else
-				throw new Exception();
+			if (args.length==0) {throw new Exception();}
+				System.out.println("args "+ args[0] );
+			
+				
 		} catch (Exception e) {
 			System.out.println(e.toString());
+		
 		} finally {
 			System.out.println("finally");
 		}
